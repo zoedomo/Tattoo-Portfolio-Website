@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url('images/grunge-bg.jpg') no-repeat center center fixed;
+  background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
   background-color: #0e0e0e;
   color: #eaeaea;
