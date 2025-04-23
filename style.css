@@ -1,40 +1,120 @@
-body {
-    background-color: #00d0df;
-    color: #e30000;
-    font-family: 'VT323', monospace;
-    background-image: url('images/grunge-bg.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    position: relative;
+/* --- GLOBAL RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  header {
-    background: #000;
-    color: #fff;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  nav a {
-    color: #fff;
-    margin: 0 1rem;
-    text-decoration: none;
-  }
-  
-  section {
-    padding: 2rem;
-  }
-  
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .gallery img {
-    width: 300px;
-    border-radius: 8px;
-  }
+
+body {
+  background: url('images/grunge-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #0e0e0e;
+  color: #eaeaea;
+  font-family: 'VT323', monospace;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* --- GRUNGE OVERLAY (OPTIONAL) --- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url('images/grunge-overlay.png') repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* --- HEADER --- */
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 2px solid #444;
+}
+
+h1, h2, nav {
+  font-family: 'Special Elite', serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ff6666;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #ff9999;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* --- SECTIONS --- */
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgba(20, 20, 20, 0.8);
+  margin-bottom: 2rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* --- GALLERY --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  border: 3px solid #222;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+  filter: contrast(1.2) grayscale(0.2);
+  border-radius: 6px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  filter: contrast(1.4) grayscale(0);
+}
+
+/* --- LINKS --- */
+a {
+  color: #ff6666;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #111;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #777;
+}
+
   
