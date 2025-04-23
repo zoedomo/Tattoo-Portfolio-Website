@@ -1,4 +1,5 @@
-/* --- GLOBAL RESET --- */
+/* Y2K Grunge Theme - Black, White, Grey */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +9,13 @@
 body {
   background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-color: #0e0e0e;
-  color: #eaeaea;
-  font-family: 'VT323', monospace;
+  background-color: #000000;
+  color: #e0e0e0;
+  font-family: 'Oswald', sans-serif;
   line-height: 1.6;
   position: relative;
 }
 
-/* --- GRUNGE OVERLAY (OPTIONAL) --- */
 body::before {
   content: "";
   position: fixed;
@@ -26,7 +26,6 @@ body::before {
   z-index: 999;
 }
 
-/* --- HEADER --- */
 header {
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
@@ -35,10 +34,11 @@ header {
 }
 
 h1, h2, nav {
-  font-family: 'Special Elite', serif;
-  letter-spacing: 1px;
+  font-weight: 600;
   text-transform: uppercase;
-  color: #ff6666;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  color: #ffffff;
 }
 
 h1 {
@@ -50,7 +50,7 @@ nav {
 }
 
 nav a {
-  color: #ff9999;
+  color: #cccccc;
   margin: 0 1rem;
   text-decoration: none;
   font-size: 1.2rem;
@@ -62,7 +62,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* --- SECTIONS --- */
 section {
   padding: 3rem 2rem;
   max-width: 1000px;
@@ -74,7 +73,6 @@ section {
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-/* --- GALLERY --- */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,20 +83,19 @@ section {
 .gallery img {
   width: 100%;
   border: 3px solid #222;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
-  filter: contrast(1.2) grayscale(0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  filter: grayscale(1) contrast(1.2);
   border-radius: 6px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
-  filter: contrast(1.4) grayscale(0);
+  filter: grayscale(0.3);
 }
 
-/* --- LINKS --- */
 a {
-  color: #ff6666;
+  color: #cccccc;
   text-decoration: none;
 }
 
@@ -107,7 +104,6 @@ a:hover {
   color: #ffffff;
 }
 
-/* --- FOOTER --- */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -116,5 +112,3 @@ footer {
   font-size: 0.9rem;
   color: #777;
 }
-
-  
