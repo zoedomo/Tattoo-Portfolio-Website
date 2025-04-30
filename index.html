@@ -11,7 +11,7 @@
 <body>
 <header>
   <h1>Zoe Ann Chase</h1>
-  <p>Tattoo Artist</p>
+  <p>Tattoos are more than just ink.</p>
   <nav>
     <a href="index.html">Home</a>
     <a href="updates.html">Updates</a>
@@ -23,6 +23,7 @@
 <!-- Portfolio Section -->
 <section id="portfolio">
   <h2>My Work</h2>
+  <div class="gallery-scroll">
   <div class="gallery">
     <img src="images/tattoo1.jpg" alt="Tattoo 1">
     <img src="images/tattoo2.jpg" alt="Tattoo 2">
@@ -34,13 +35,14 @@
     <img src="images/tattoo8.jpg" alt="Tattoo 8">
     <img src="images/tattoo9.jpg" alt="Tattoo 9">
   </div>
+</div>
 </section>
 
 <!-- Flash Section -->
 <section id="flash">
   <h2>Flash Available</h2>
   <p>All flash designs are available for tattooing. Claim yours before it's gone! Prices available on request.</p>
-  
+  <div class="flash-scroll">
   <div class="flash-gallery">
     <div class="flash-item">
       <img src="images/flash1.jpg" alt="Flash Design 1">
@@ -56,13 +58,20 @@
     </div>
     <!-- Add more flash pieces as you make them -->
   </div>
+</div>
 </section>
 
 
 <!-- Booking Section -->
 <section id="booking">
-  <h2>Booking</h2>
-  <p>Fill out my <a href="https://forms.gle/vGKgYDJPGRtECRye7" target="_blank">booking form</a>.</p>
+  <h2>Book Your Tattoo</h2>
+  <p>Ready to get inked? Whether it’s your first tattoo or your fifth, I’m here to make it a comfortable, creative, and safe experience.</p>
+
+  <p>I offer custom work, flash pieces, and collaborative designs — let’s bring your vision to life.</p>
+
+  <p>Click below to fill out my quick booking form. Once submitted, I’ll review it and reach out personally to schedule your session.</p>
+
+  <a href="https://forms.gle/vGKgYDJPGRtECRye7" target="_blank" class="booking-btn">✨ Book a Session</a>
 </section>
 
 <!-- About Me Section -->
@@ -90,18 +99,44 @@
 <!-- Contact Section -->
 <section id="contact">
   <h2>Contact</h2>
-  <p><a href="mailto:zoeannchase.ink@gmail.com" class="gmail-btn" target="_blank">
-    <img src="images/gmail logo.webp" alt="Gmail logo" class="gmail-icon">
-    zoeannchase.ink@gmail.com
-  </a></p>
 
-  <p><a href="https://instagram.com/zoeannchase.ink" target="_blank" class="insta-btn">
-    <img src="images/instagram logo.png" alt="Instagram" class="insta-icon">
-    @zoeannchase.ink
-  </a></p>
+  <div class="contact-flex">
+    <!-- LEFT SIDE: INFO -->
+    <div class="contact-left">
+      <div class="contact-info">
+        <p><strong>Studio Name:</strong> Piercings on Main</p>
+        <p><strong>Address:</strong> 400 N Main St Suite C, Edwardsville, IL 62025</p>
+        <p><strong>Phone:</strong> <a</a></p>
+        <p><strong>Email:</strong> <a href="mailto:zoeannchase.ink@gmail.com">zoeannchase.ink@gmail.com</a></p>
+
+        <div class="hours-compact">
+          <strong>Hours:</strong>
+          <ul style="margin-left: 2rem;">
+            <li><span>Mon:</span> Closed</li>
+            <li><span>Tue – Sat:</span> 1 PM – 8 PM</li>
+            <li><span>Sun:</span> Closed</li>
+          </ul>
+        </div>
+
+    <!-- RIGHT SIDE: MAP -->
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.7639738522557!2d-89.9594513!3d38.8149611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8875f9c88c551025%3A0x23fd28fc4796ad87!2sPiercings%20on%20Main!5e0!3m2!1sen!2sus!4v1745976942093!5m2!1sen!2sus"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 </section>
 
+
 <footer>
+  <div class="footer-socials">
+    <a href="https://instagram.com/zoeannchase.ink" target="_blank">
+      <img src="images/instagram logo.png" alt="Instagram" class="footer-icon">
+    </a>
+    <a href="https://www.facebook.com/zoeannchase/" target="_blank">
+      <img src="images/facebook logo.png" alt="Facebook" class="footer-icon">
+    </a>
+  </div>
   <p>&copy; 2025 Zoe Ann Chase</p>
 </footer>
 
@@ -120,7 +155,28 @@ const observer = new IntersectionObserver((entries) => {
 images.forEach(image => observer.observe(image));
 </script>
 
+<button id="backToTop" title="Back to top">↑</button>
 
+<script>
+  // Show/hide button on scroll
+  const backToTop = document.getElementById('backToTop');
+
+  window.onscroll = () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll to top on click
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 
 </body>
 </html>

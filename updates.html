@@ -11,7 +11,7 @@
 <body>
 <header>
   <h1>Zoe Ann Chase</h1>
-  <p>Tattoo Artist</p>
+  <p>Tattoos are more than just ink.</p>
   <nav>
     <a href="index.html">Home</a>
     <a href="updates.html">Updates</a>
@@ -26,12 +26,12 @@
   <div class="events-grid">
     <div class="event-card">
       <h3>Grand Opening!</h3>
-      <p><strong>Date:</strong> June 15, 2025</p>
-      <p>Come celebrate the launch of our new studio with giveaways, flash specials, and free goodies!</p>
+      <p><strong>Date:</strong> Late May of 2025</p>
+      <p>Come celebrate the launch of our new studio with giveaways, flash specials, and free goodies! Updates soon so stay tuned!</p>
     </div>
     <div class="event-card">
       <h3>Summer Flash Sale</h3>
-      <p><strong>Date:</strong> July 20-21, 2025</p>
+      <p><strong>Date:</strong> TBD</p>
       <p>Exclusive flash pieces available! First come, first served.</p>
     </div>
   </div>
@@ -70,24 +70,73 @@
     
   </form>
 </section>
+<br>
 
-
-<!-- Contact Section -->
 <section id="contact">
   <h2>Contact</h2>
-  <p><a href="mailto:zoeannchase.ink@gmail.com" class="gmail-btn" target="_blank">
-    <img src="images/gmail logo.webp" alt="Gmail logo" class="gmail-icon">
-    zoeannchase.ink@gmail.com
-  </a></p>
 
-  <p><a href="https://instagram.com/zoeannchase.ink" target="_blank" class="insta-btn">
-    <img src="images/instagram logo.png" alt="Instagram" class="insta-icon">
-    @zoeannchase.ink
-  </a></p>
+  <div class="contact-flex">
+    <!-- LEFT SIDE: INFO -->
+    <div class="contact-left">
+      <div class="contact-info">
+        <p><strong>Studio Name:</strong> Piercings on Main</p>
+        <p><strong>Address:</strong> 400 N Main St Suite C, Edwardsville, IL 62025</p>
+        <p><strong>Phone:</strong> <a</a></p>
+        <p><strong>Email:</strong> <a href="mailto:zoeannchase.ink@gmail.com">zoeannchase.ink@gmail.com</a></p>
+
+        <div class="hours-compact">
+          <strong>Hours:</strong>
+          <ul style="margin-left: 2rem;">
+            <li><span>Mon:</span> Closed</li>
+            <li><span>Tue – Sat:</span> 1 PM – 8 PM</li>
+            <li><span>Sun:</span> Closed</li>
+          </ul>
+        </div>
+
+    <!-- RIGHT SIDE: MAP -->
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.7639738522557!2d-89.9594513!3d38.8149611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8875f9c88c551025%3A0x23fd28fc4796ad87!2sPiercings%20on%20Main!5e0!3m2!1sen!2sus!4v1745976942093!5m2!1sen!2sus"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 </section>
 
+
 <footer>
+  <div class="footer-socials">
+    <a href="https://instagram.com/zoeannchase.ink" target="_blank">
+      <img src="images/instagram logo.png" alt="Instagram" class="footer-icon">
+    </a>
+    <a href="https://www.facebook.com/zoeannchase/" target="_blank">
+      <img src="images/facebook logo.png" alt="Facebook" class="footer-icon">
+    </a>
+  </div>
   <p>&copy; 2025 Zoe Ann Chase</p>
 </footer>
+
+<button id="backToTop" title="Back to top">↑</button>
+
+<script>
+  // Show/hide button on scroll
+  const backToTop = document.getElementById('backToTop');
+
+  window.onscroll = () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll to top on click
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
 </body>
 </html>

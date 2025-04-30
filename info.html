@@ -11,7 +11,7 @@
 <body>
 <header>
   <h1>Zoe Ann Chase</h1>
-  <p>Tattoo Artist</p>
+  <p>Tattoos are more than just ink.</p>
   <nav>
     <a href="index.html">Home</a>
     <a href="updates.html">Updates</a>
@@ -23,9 +23,10 @@
 <!-- FAQ Section -->
 <section id="faq">
   <h2>Frequently Asked Questions</h2>
+  <div class="faq-scroll">
   <div class="faq-item">
     <h3>How do I book a tattoo?</h3>
-    <p>Fill out the <a href="index.html#booking">booking form</a> on my website or message me through Instagram to schedule your session!</p>
+    <p>Fill out the <a href="index.html#booking">booking form</a> on my website or message me through Instagram or Facebook to schedule your appointment!</p>
   </div>
   <div class="faq-item">
     <h3>How much do tattoos cost?</h3>
@@ -37,12 +38,17 @@
   </div>
   <div class="faq-item">
     <h3>What should I do to prepare for my appointment?</h3>
-    <p>Make sure you are well-rested, hydrated, and have eaten before your session. Wear comfortable clothing that makes the area you're getting tattooed easy to access.</p>
+    <p>Make sure you are well-rested, hydrated, and have eaten before your appointment. Wear comfortable clothing that makes the area you're getting tattooed easy to access.</p>
   </div>
   <div class="faq-item">
     <h3>Does getting a tattoo hurt?</h3>
     <p>Pain tolerance varies for everyone, but tattoos generally involve some discomfort. I always work with my clients to make the process as comfortable as possible.</p>
   </div>
+  <div class="faq-item">
+    <h3>How do I Pay?</h3>
+    <p>I accept Cash, CashApp, or Venmo.</p>
+  </div>
+</div>
 </section>
 
 <!-- Aftercare Section -->
@@ -50,15 +56,15 @@
   <h2>Aftercare Instructions</h2>
   <div class="aftercare-content">
     <p>Taking care of your new tattoo is crucial for proper healing and long-lasting results. Here's how to care for your ink:</p>
-    <ul>
-      <li>🧼 Wash your hands before touching your tattoo.</li>
-      <li>🫧 Gently clean your tattoo with lukewarm water and mild, fragrance-free soap.</li>
-      <li>🧻 Pat dry with a clean paper towel — don't rub.</li>
-      <li>💨 Let your tattoo breathe for a few minutes, then apply a thin layer of recommended aftercare ointment.</li>
-      <li>👕 Wear loose, clean clothing over the area — avoid tight or abrasive fabrics.</li>
-      <li>🌞 Avoid direct sunlight, swimming, and soaking your tattoo until it's fully healed (about 2-4 weeks).</li>
-      <li>🙅‍♀️ Do not pick, scratch, or peel the scabs or flakes!</li>
-      <li>📞 Contact me if you have any questions or concerns during healing!</li>
+    <ul style="margin-left: 2rem;">
+      <li> Wash your hands before touching your tattoo.</li>
+      <li> Gently clean your tattoo with lukewarm water and mild, fragrance-free soap.</li>
+      <li> Pat dry with a clean paper towel — don't rub.</li>
+      <li> Let your tattoo breathe for a few minutes, then apply a thin layer of recommended aftercare ointment.</li>
+      <li> Wear loose, clean clothing over the area — avoid tight or abrasive fabrics.</li>
+      <li> Avoid direct sunlight, swimming, and soaking your tattoo until it's fully healed (about 2-4 weeks).</li>
+      <li> Do not pick, scratch, or peel the scabs or flakes!</li>
+      <li> Contact me if you have any questions or concerns during healing!</li>
     </ul>
     <p>Follow these instructions carefully to ensure the best possible healing and a beautiful final result!</p>
   </div>
@@ -90,19 +96,69 @@
 <!-- Contact Section -->
 <section id="contact">
   <h2>Contact</h2>
-  <p><a href="mailto:zoeannchase.ink@gmail.com" class="gmail-btn" target="_blank">
-    <img src="images/gmail logo.webp" alt="Gmail logo" class="gmail-icon">
-    zoeannchase.ink@gmail.com
-  </a></p>
 
-  <p><a href="https://instagram.com/zoeannchase.ink" target="_blank" class="insta-btn">
-    <img src="images/instagram logo.png" alt="Instagram" class="insta-icon">
-    @zoeannchase.ink
-  </a></p>
+  <div class="contact-flex">
+    <!-- LEFT SIDE: INFO -->
+    <div class="contact-left">
+      <div class="contact-info">
+        <p><strong>Studio Name:</strong> Piercings on Main</p>
+        <p><strong>Address:</strong> 400 N Main St Suite C, Edwardsville, IL 62025</p>
+        <p><strong>Phone:</strong> <a</a></p>
+        <p><strong>Email:</strong> <a href="mailto:zoeannchase.ink@gmail.com">zoeannchase.ink@gmail.com</a></p>
+
+        <div class="hours-compact">
+          <strong>Hours:</strong>
+          <ul style="margin-left: 2rem;">
+            <li><span>Mon:</span> Closed</li>
+            <li><span>Tue – Sat:</span> 1 PM – 8 PM</li>
+            <li><span>Sun:</span> Closed</li>
+          </ul>
+        </div>
+
+    <!-- RIGHT SIDE: MAP -->
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3108.7639738522557!2d-89.9594513!3d38.8149611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8875f9c88c551025%3A0x23fd28fc4796ad87!2sPiercings%20on%20Main!5e0!3m2!1sen!2sus!4v1745976942093!5m2!1sen!2sus"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 </section>
 
+
 <footer>
+  <div class="footer-socials">
+    <a href="https://instagram.com/zoeannchase.ink" target="_blank">
+      <img src="images/instagram logo.png" alt="Instagram" class="footer-icon">
+    </a>
+    <a href="https://www.facebook.com/zoeannchase/" target="_blank">
+      <img src="images/facebook logo.png" alt="Facebook" class="footer-icon">
+    </a>
+  </div>
   <p>&copy; 2025 Zoe Ann Chase</p>
 </footer>
+
+<button id="backToTop" title="Back to top">↑</button>
+
+<script>
+  // Show/hide button on scroll
+  const backToTop = document.getElementById('backToTop');
+
+  window.onscroll = () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // Scroll to top on click
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
 </body>
 </html>

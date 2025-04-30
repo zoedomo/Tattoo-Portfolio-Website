@@ -168,6 +168,36 @@ section#about p {
   font-size: 1rem;
   color: #ccc;
 }
+.flash-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.gallery-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.booking-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 2rem;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.booking-btn:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
 
 #blog, #events {
   padding: 3rem 2rem;
@@ -230,6 +260,15 @@ section#about p {
   font-size: 1rem;
   color: #cccccc;
   line-height: 1.6;
+}
+
+.faq-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .review-btn {
@@ -386,18 +425,80 @@ a:hover {
   margin-top: 0.5rem;
 }
 
-.insta-icon {
-  width: 40;
-  height: 20px;
-  object-fit: contain;
-  filter: grayscale(1) contrast(1.2);
+.contact-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.gmail-icon {
-  width: 25px;
-  height: 25px;
-  object-fit: contain;
-  filter: grayscale(1) contrast(1.2);
+.contact-left {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+.contact-map {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+
+.hours-compact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.hours-compact li {
+  margin: 0.2rem 0;
+}
+
+.hours-compact span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 600;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #333;
+}
+
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-icon {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(1) brightness(1.4) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+.footer-icon:hover {
+  filter: grayscale(0) brightness(1.2);
 }
 
 footer {
