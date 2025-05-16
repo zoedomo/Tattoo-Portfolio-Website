@@ -69,75 +69,75 @@
   <p>Prices available on request. Click to view.</p>
   <div class="flash-scroll">
   <div class="flash-gallery">
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash5.PNG" alt="Flash Design 5" class="clickable-flash">
       <p>Available</p>
     </div>
 
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash7.PNG" alt="Flash Design 7" class="clickable-flash">
       <p>Available</p>
     </div>
 
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item">
       <img src="images/flash8.PNG" alt="Flash Design 8" class="clickable-flash">
       <p>Available</p>
     </div>
 
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item">
       <img src="images/flash1.PNG" alt="Flash Design 1" class="clickable-flash">
       <p>Available</p>
     </div>
 
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item">
       <img src="images/flash6.PNG" alt=" Flash Design 6" class="clickable-flash">
       <p>Available</p>
     </div>
 
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash2.PNG" alt="Flash Design 2" class="clickable-flash">
       <p>Available</p>
     </div>
 
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
         <img src="images/flash9.PNG" alt="Flash Design 9" class="clickable-flash">
         <p>Available</p>
     </div>
 
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item">
         <img src="images/flash4.PNG" alt="Flash Design 4" class="clickable-flash">
         <p>Available</p>
     </div>
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash10.PNG" alt="Flash Design 10" class="clickable-flash">
       <p>Available</p>
     </div>
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash11.PNG" alt="Flash Design 11" class="clickable-flash">
       <p>Available</p>
     </div>
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash12.PNG" alt="Flash Design 12" class="clickable-flash">
       <p>Available</p>
     </div>
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash13.PNG" alt="Flash Design 13" class="clickable-flash">
       <p>Available</p>
     </div>
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash14.PNG" alt="Flash Design 14" class="clickable-flash">
       <p>Available</p>
     </div>
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash15.PNG" alt="Flash Design 15" class="clickable-flash">
       <p>Available</p>
     </div>
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash16.PNG" alt="Flash Design 16" class="clickable-flash">
       <p>Available</p>
     </div>
   
-    <div class="flash-item" onclick="toggleFlashEnlarge(this)">
+    <div class="flash-item" >
       <img src="images/flash18.PNG" alt="Flash Design 9" class="clickable-flash">
       <p>Available</p>
     </div>
@@ -250,6 +250,8 @@ images.forEach(image => observer.observe(image));
 
 <button id="backToTop" title="Back to top">↑</button>
 
+
+
 <script>
   // Show/hide button on scroll
   const backToTop = document.getElementById('backToTop');
@@ -272,45 +274,38 @@ images.forEach(image => observer.observe(image));
 </script>
 
 <script>
-  document.querySelectorAll('.flash-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      // If already enlarged, remove the class
-      if (img.classList.contains('enlarged')) {
-        img.classList.remove('enlarged');
-        document.body.style.overflow = ''; // unlock scroll
-      } else {
-        // Remove any other enlarged image
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent); // More accurate than just screen width
+
+  if (!isMobile) {
+    document.querySelectorAll('.flash-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        const isEnlarged = img.classList.contains('enlarged');
+
+        // Remove enlarged from all other images
         document.querySelectorAll('.flash-item img.enlarged').forEach(other => {
           other.classList.remove('enlarged');
         });
-        img.classList.add('enlarged');
-        document.body.style.overflow = 'hidden'; // lock scroll
-      }
-    });
-  });
 
-  // Optional: Close image if user clicks outside
-  document.addEventListener('click', (e) => {
-    const enlarged = document.querySelector('.flash-item img.enlarged');
-    if (enlarged && !enlarged.contains(e.target)) {
-      enlarged.classList.remove('enlarged');
-      document.body.style.overflow = '';
-    }
-  });
-</script>
-<script>
-  function toggleFlashEnlarge(element) {
-    // Remove 'enlarged' from other items
-    document.querySelectorAll('.flash-item.enlarged').forEach(item => {
-      if (item !== element) {
-        item.classList.remove('enlarged');
+        if (!isEnlarged) {
+          img.classList.add('enlarged');
+          document.body.style.overflow = 'hidden'; // Lock scroll (desktop only)
+        } else {
+          img.classList.remove('enlarged');
+          document.body.style.overflow = ''; // Unlock scroll
+        }
+      });
+    });
+
+    // Close image if clicking outside of it
+    document.addEventListener('click', (e) => {
+      const enlarged = document.querySelector('.flash-item img.enlarged');
+      if (enlarged && !enlarged.contains(e.target)) {
+        enlarged.classList.remove('enlarged');
+        document.body.style.overflow = '';
       }
     });
-  
-    // Toggle current item
-    element.classList.toggle('enlarged');
   }
-  </script>
+</script>
 
 </body>
 </html>

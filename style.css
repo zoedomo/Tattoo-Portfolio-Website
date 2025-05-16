@@ -190,22 +190,24 @@ section#about p {
   cursor: zoom-in;
 }
 
-.flash-item img.enlarged {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: 80vh;
-  transform: translate(-50%, -50%);
-  z-index: 99999; /* high enough to float above everything */
-  background-color: #000;
-  padding: 1rem;
-  border: 1px solid #555;
-  border-radius: 8px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-  cursor: zoom-out;
-}
 
+@media (hover: hover) and (pointer: fine) {
+  .flash-item img.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    background-color: #000;
+    padding: 1rem;
+    border: 1px solid #555;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    cursor: zoom-out;
+  }
+}
 
 
 .flash-item p {
