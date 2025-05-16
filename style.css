@@ -538,13 +538,14 @@ a:hover {
   bottom: 2rem;
   right: 2rem;
   z-index: 9999;
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fafafa;
   border: 1px solid #444;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
+  width: 100px;
+  height: 100px;
+  font-size: 3rem;
+  font-weight: bold;
   cursor: pointer;
   display: none;
   transition: background-color 0.3s ease;
@@ -563,8 +564,8 @@ a:hover {
 }
 
 .footer-icon {
-  width: 28px;
-  height: 28px;
+  width: 70px;
+  height: 70px;
   filter: grayscale(1) brightness(1.4) contrast(1.1);
   transition: filter 0.3s ease;
 }
